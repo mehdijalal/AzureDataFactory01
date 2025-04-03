@@ -1,0 +1,32 @@
+{
+	"name": "Milestones",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Milestones.csv",
+				"fileSystem": "mjcon01"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "MilestoneID",
+				"type": "String"
+			},
+			{
+				"name": "MilestoneName",
+				"type": "String"
+			}
+		]
+	}
+}
